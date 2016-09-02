@@ -84,11 +84,32 @@ def makeWebhookResult(data):
     print(speech)
 
     return {
-        "speech": speech,
-        "displayText": speech,
-        # "data": data,
-        # "contextOut": [],
-        "source": "apiai-weather-webhook-sample"
+        {speech: "Let me get an expert to help you.  Please click on the link below.", 
+				displayText: "TV Recommendations", 
+				data:         {
+					"facebook": {
+					  "attachment": {
+						  "type":"template",
+							  "payload":{
+									"template_type":"button",
+									"text":"Unfortunately, I'm unable to help with that query.  Would you like to talk to an expert?",
+									"buttons":[
+									  {
+										"type":"postback",
+										"title":"Talk to an agent",
+										"payload":"Talk to an agent"
+									  },
+									  {
+										"type":"postback",
+										"title":"No, thanks",
+										"payload":"No, thanks"
+									  }
+									]
+							  }
+					  }
+					}  
+				}, 
+				source: "Zero Service - app_zero.js"}
     }
 
 
