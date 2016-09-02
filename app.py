@@ -109,7 +109,7 @@ def makeWebhookResult(data):
 					  }
 					}  
 				}, 
-				source: "Zero Service - app_zero.js"}
+				source: "apiai-weather-webhook-sample.js"}
     }
 
 
