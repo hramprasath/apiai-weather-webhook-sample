@@ -84,9 +84,9 @@ def makeWebhookResult(data):
     print(speech)
 
     return {
-        speech: "Let me get an expert to help you.  Please click on the link below.", 
-				displayText: "TV Recommendations", 
-				data:         {
+        "speech": "Let me get an expert to help you.  Please click on the link below.", 
+				"displayText": "TV Recommendations", 
+				"data":         {
 					"facebook": {
 					  "attachment": {
 						  "type":"template",
@@ -109,7 +109,7 @@ def makeWebhookResult(data):
 					  }
 					}  
 				}, 
-				source: "apiai-weather-webhook-sample.js"
+				"source": "apiai-weather-webhook-sample.js"
 			
     }
 
